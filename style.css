@@ -104,30 +104,5 @@ select option{
     padding: 20px;
 }
 .card h4{
-   padding: 0 20px;
-}
-
-@media only screen and (min-width: 375px) {
-    .navbar{
-        width: 100%;
-        align-items: center;
-        padding: 20px;
-        
-    }
-   .navbar .logo{
-       font-size: 18px;
-    }
-
-
-    .sec_part{
-        display: flex;
-        flex-direction: column;
-        
-    }
-    .container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    
+   padding: 0 20px;   
 }
