@@ -71,7 +71,7 @@ select{
 select option{
     padding: 20px;
     border: none;
-    
+
     
 }
 
@@ -105,4 +105,28 @@ select option{
 }
 .card h4{
    padding: 0 20px;
+}
+
+@media only screen and (min-width: 375px) {
+    .navbar{
+        width: 100%;
+        align-items: center;
+        
+    }
+    .sec_part{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    select{
+        justify-content: left;
+        margin-left: -155px;
+
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
 }
