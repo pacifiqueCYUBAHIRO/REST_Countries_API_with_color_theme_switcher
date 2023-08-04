@@ -124,11 +124,6 @@ select option{
         flex-direction: column;
         
     }
-    select{
-        justify-content: left;
-        margin-left: -155px;
-
-    }
     .container{
         display: flex;
         flex-direction: column;
