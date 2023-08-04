@@ -113,8 +113,8 @@ select option{
         align-items: center;
         
     }
-    .logo{
-       font-family: 18px;
+   .navbar .logo{
+       font-size: 18px;
     }
 
 
