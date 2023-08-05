@@ -3,16 +3,30 @@
     padding: 0;
     margin: 0;
 }
+
+:root{
+    --primary-color: hsl(0, 0%, 100%);
+    --secondary-color: #000;
+    --third-color: hsl(0, 0%, 96%);
+    --forth-color: 5px 5px 5px #e2e2e2, -5px -5px 3px #e2e2e2;
+    --five-color: hsl(0, 2%, 8%);
+}
+.dark-theme{
+    --primary-color: hsl(0, 1%, 13%);
+    --secondary-color: #ccc;
+    --third-color: hsl(0, 1%, 15%);
+    --forth-color: 5px 5px 5px #0d1624, -5px -5px 3px #2f2f30;
+}
 body {
-    background-color: hsl(0, 0%, 98%);
+    background-color:var(--third-color);
 }
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff;
-    box-shadow: 5px 5px 5px #f1efef, -5px -5px 3px #f3f2f2;
-    color: #000;
+    background-color: var(--primary-color);
+    box-shadow: var(--forth-color);
+    color: var(--secondary-color);
     padding: 20px;
 }
 
@@ -20,16 +34,15 @@ body {
     font-size: 24px;
     font-weight: bold;
     margin-left: 10px;
-    margin-left: 10px;
 }
 .navbar .moon-icon {
-    color: #000;
+    color: var(--secondary-color);
     text-decoration: none;
     font-size: 15px;
   }
 
 .navbar a {
-    color: #000;
+    color: var(--secondary-color);
     text-decoration: none;
     padding: 5px;
 }
@@ -39,20 +52,26 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    
 
 }
 
 .search{
     width: 300px;
     margin: 10px;
-    background: #fff;
+    background: var( --primary-color);
     padding: 10px;
-    box-shadow: 5px 5px 5px #f1efef, -5px -5px 3px #f3f2f2;
+    box-shadow: var(--forth-color);
+}
+.search i{
+    color: var(--secondary-color);
 }
 .search input[type="search"]{
     border: none;
     padding: 5px;
     width: 280px;
+    color: var(--five-color);
+    
 }
 
 select{
@@ -60,14 +79,16 @@ select{
     width: 150px;
     height: 43px;
     margin: 10px;
-    background-color: #fff;
+    background-color: var( --primary-color);
     border: none;
     padding: 5px;
-    box-shadow: 5px 5px 5px #f1efef, -5px -5px 3px #f3f2f2;
+    color: var(--secondary-color);
+    box-shadow: var(--forth-color);
 }
 select option{
     padding: 20px;
     border: none;
+    color: var(--secondary-color);
 
 }
 
@@ -84,8 +105,9 @@ select option{
     flex-basis: 20%;
     margin: 30px;
     border-radius: 5px;
-    background: #fff;
-    box-shadow: 5px 5px 5px #f1efef, -5px -5px 3px #f3f2f2;
+    background: var( --primary-color);
+    color: var(--secondary-color);
+    box-shadow: var(--forth-color);
 }
 .card img{
     width: 100%;
@@ -103,11 +125,12 @@ select option{
    padding: 0 20px;   
 }
 
-@media only screen and (min-width: 375px) {
+@media only screen and (max-width: 720px) {
     .navbar{
         width: 100%;
-        align-items: center;
-        
+    }
+    .navbar .logo{
+    font-size: 24px;            
     }
     .sec_part{
         display: flex;
@@ -115,14 +138,18 @@ select option{
         
     }
     select{
-        justify-content: left;
-        margin-left: -155px;
-
+        display: flex;
+        margin-right: 180px;
     }
     .container{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        width: 100%;
+        padding: 0 20px;
+
     }
-    
+
+
 }
+
+  
