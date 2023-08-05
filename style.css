@@ -20,6 +20,7 @@ body {
     font-size: 24px;
     font-weight: bold;
     margin-left: 10px;
+    margin-left: 10px;
 }
 .navbar .moon-icon {
     color: #000;
@@ -99,15 +100,14 @@ select option{
     padding: 20px;
 }
 .card h4{
-   padding: 0 20px;
+   padding: 0 20px;   
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (min-width: 375px) {
     .navbar{
         width: 100%;
-    }
-    .navbar .logo{
-    font-size: 24px;            
+        align-items: center;
+        
     }
     .sec_part{
         display: flex;
@@ -115,16 +115,14 @@ select option{
         
     }
     select{
-        display: flex;
-        margin-right: 180px;
+        justify-content: left;
+        margin-left: -155px;
+
     }
     .container{
         display: flex;
         flex-direction: column;
-        width: 100%;
-        padding: 0 20px;
-
+        justify-content: center;
     }
-
-
+    
 }
