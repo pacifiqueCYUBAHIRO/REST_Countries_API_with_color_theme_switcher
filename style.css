@@ -213,9 +213,12 @@ select option{
     .country-details{
         display: flex;
         flex-direction: column;
+        justify-content: center;
     }
     .country-details img{
-        width: 335px;
+        width: 100%;
+        align-items: center;
+        margin: 20px;
     }
 
     
