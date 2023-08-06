@@ -141,7 +141,7 @@ select option{
     border-radius: 5px;
     margin-bottom: 10px;
     float: left;
-    margin-left: 150px;
+    
 }
 
 .country-details h2 {
@@ -205,6 +205,15 @@ select option{
         padding: 0 20px;
 
     }
+    .country-details{
+        display: flex;
+        flex-direction: column;
+    }
+    .country-details img{
+        width: 335px;
+    }
+
+    
 
 
 }
