@@ -8,139 +8,247 @@
     <title>Title</title>
 </head>
 <body>
-<div class="navbar">
-<div class="logo">Where in the world?</div>
-<div>
-    <a class="moon-icon" href="#" id="icon"><i class="fas fa-moon"></i></a>
-    <a class="link" href="#" id="icon">Dark Mode</a>
-  </div>
-</div>
-
-<div class="sec_part">
-<div class="search"><i class="fas fa-search"></i> <input type="search" placeholder="search for a country" id="searchInput" /></div>
-
-<div>
-<select name="regionFilter" id="regionFilter">
-    <option disabled selected><a href="#">Filter by Region</a></option>
-    <option><a href="#">Germeny</a></option>
-    <option><a href="#">Sweden</a></option>
-    <option><a href="#">USA</a></option>
-    <option><a href="#">Belgium</a></option>
-</select>
-</div>
-</div>
-
-
-<div class="container">
-    <div class="card germany">
-        <img src="./images/germany.png" width="100px" height="180px" alt="">
-        <h2>Germany</h2>
-        <div style="display: flex; flex-direction: row;"><h4>Population:</h4><p>8378787</p></div>
-        <div style="display: flex; flex-direction: row;"><h4>Religion:</h4><p>Sooth asia</p></div>
-        <div style="display: flex; flex-direction: row;"><h4>Capital:</h4><p>*****</p></div><br><br>
+    <div class="navbar">
+        <div class="logo">Where in the world?</div>
+        <div>
+            <a class="moon-icon" href="#" id="icon"><i class="fas fa-moon"></i></a>
+            <a class="link" href="#" id="icon">Dark Mode</a>
+        </div>
+    </div>
+    <div class="back-button" id="backButton" style="display: none;">
+        <button>Back</button>
+    </div>
+    <div class="sec_part" id="searchFilterDiv">
+        <div class="search"><i class="fas fa-search"></i> <input type="search" placeholder="search for a country" id="searchInput" /></div>
+        <div>
+            <select name="regionFilter" id="regionFilter">
+                <option disabled selected>Filter by Region</option>
+                <option value="all">All</option>
+                <option value="north asia">North Asia</option>
+                <option value="south asia">South Asia</option>
+                <option value="america">America</option>
+                <option value="europe">Europe</option>
+            </select>
+        </div>
     </div>
 
-    <div class="card">
-        <img src="./images/usa.png" width="100px" height="180px" alt="">
-        
-        <h2>USA</h2>
-        <div style="display: flex; flex-direction: row;"><h4>Population:</h4><p>8378787</p></div>
-        <div style="display: flex; flex-direction: row;"><h4>Religion:</h4><p>Sooth asia</p></div>
-        <div style="display: flex; flex-direction: row;"><h4>Capital:</h4><p>*****</p></div><br><br>
-    </div>
+    <div class="container" id="countryCards">
+        <!-- North America -->
+        <div class="card usa" data-country="USA">
+            <img src="./images/usa.png" width="100px" height="180px" alt="">
+            <h2>USA</h2>
+            <div style="display: flex; flex-direction: row;"><h4>Population:</h4><p>8378787</p></div>
+            <div style="display: flex; flex-direction: row;"><h4>Religion:</h4><p>America</p></div>
+            <div style="display: flex; flex-direction: row;"><h4>Capital:</h4><p>*****</p></div><br><br>
+        </div>
+        <div class="card canada" data-country="Canada">
+            <img src="./images/canada.png" width="100px" height="180px" alt="">
+            <h2>Canada</h2>
+            <div style="display: flex; flex-direction: row;"><h4>Population:</h4><p>8378787</p></div>
+            <div style="display: flex; flex-direction: row;"><h4>Religion:</h4><p>North America</p></div>
+            <div style="display: flex; flex-direction: row;"><h4>Capital:</h4><p>*****</p></div><br><br>
+        </div>
+        <div class="card mexico" data-country="Mexico">
+            <img src="./images/mexico.png" width="100px" height="180px" alt="">
+            <h2>Mexico</h2>
+            <div style="display: flex; flex-direction: row;"><h4>Population:</h4><p>8378787</p></div>
+            <div style="display: flex; flex-direction: row;"><h4>Religion:</h4><p>North America</p></div>
+            <div style="display: flex; flex-direction: row;"><h4>Capital:</h4><p>*****</p></div><br><br>
+        </div>
 
-    <div class="card">
-        <img src="./images/belgium.png" width="100px" height="180px" alt="">
-        <h2>Belgium</h2>
-        <div style="display: flex; flex-direction: row;"><h4>Population:</h4><p>8378787</p></div>
-        <div style="display: flex; flex-direction: row;"><h4>Religion:</h4><p>Sooth asia</p></div>
-        <div style="display: flex; flex-direction: row;"><h4>Capital:</h4><p>*****</p></div><br><br>
-    </div>
+        <!-- South America -->
+        <div class="card brazil" data-country="Brazil">
+            <img src="./images/brazil.png" width="100px" height="180px" alt="">
+            <h2>Brazil</h2>
+            <div style="display: flex; flex-direction: row;"><h4>Population:</h4><p>8378787</p></div>
+            <div style="display: flex; flex-direction: row;"><h4>Religion:</h4><p>South America</p></div>
+            <div style="display: flex; flex-direction: row;"><h4>Capital:</h4><p>*****</p></div><br><br>
+        </div>
+        <div class="card argentina" data-country="Argentina">
+            <img src="./images/argentina.png" width="100px" height="180px" alt="">
+            <h2>Argentina</h2>
+            <div style="display: flex; flex-direction: row;"><h4>Population:</h4><p>8378787</p></div>
+            <div style="display: flex; flex-direction: row;"><h4>Religion:</h4><p>South America</p></div>
+            <div style="display: flex; flex-direction: row;"><h4>Capital:</h4><p>*****</p></div><br><br>
+        </div>
 
+        <!-- Europe -->
+        <div class="card germany" data-country="Germany">
+            <img src="./images/germany.png" width="100px" height="180px" alt="">
+            <h2>Germany</h2>
+            <div style="display: flex; flex-direction: row;"><h4>Population:</h4><p>8378787</p></div>
+            <div style="display: flex; flex-direction: row;"><h4>Religion:</h4><p>Europe</p></div>
+            <div style="display: flex; flex-direction: row;"><h4>Capital:</h4><p>*****</p></div><br><br>
+        </div>
+        <div class="card france" data-country="France">
+            <img src="./images/france.png" width="100px" height="180px" alt="">
+            <h2>France</h2>
+            <div style="display: flex; flex-direction: row;"><h4>Population:</h4><p>8378787</p></div>
+            <div style="display: flex; flex-direction: row;"><h4>Religion:</h4><p>Europe</p></div>
+            <div style="display: flex; flex-direction: row;"><h4>Capital:</h4><p>*****</p></div><br><br>
+        </div>
 
+        <!-- Asia -->
+        <div class="card china" data-country="China">
+            <img src="./images/china.png" width="100px" height="180px" alt="">
+            <h2>China</h2>
+            <div style="display: flex; flex-direction: row;"><h4>Population:</h4><p>8378787</p></div>
+            <div style="display: flex; flex-direction: row;"><h4>Religion:</h4><p>Asia</p></div>
+            <div style="display: flex; flex-direction: row;"><h4>Capital:</h4><p>*****</p></div><br><br>
+        </div>
+        <div class="card india" data-country="India">
+            <img src="./images/india.png" width="100px" height="180px" alt="">
+            <h2>India</h2>
+            <div style="display: flex; flex-direction: row;"><h4>Population:</h4><p>8378787</p></div>
+            <div style="display: flex; flex-direction: row;"><h4>Religion:</h4><p>Asia</p></div>
+            <div style="display: flex; flex-direction: row;"><h4>Capital:</h4><p>*****</p></div><br><br>
+        </div>
 
-    <div class="card">
-        <img src="./images/canada.png" width="100px" height="180px" alt="">
-        <h2>Canada</h2>
-        <div style="display: flex; flex-direction: row;"><h4>Population:</h4><p>8378787</p></div>
-        <div style="display: flex; flex-direction: row;"><h4>Religion:</h4><p>Sooth asia</p></div>
-        <div style="display: flex; flex-direction: row;"><h4>Capital:</h4><p>*****</p></div><br><br>
+        <!-- Africa -->
+        <div class="card nigeria" data-country="Nigeria">
+            <img src="./images/nigeria.png" width="100px" height="180px" alt="">
+            <h2>Nigeria</h2>
+            <div style="display: flex; flex-direction: row;"><h4>Population:</h4><p>8378787</p></div>
+            <div style="display: flex; flex-direction: row;"><h4>Religion:</h4><p>Africa</p></div>
+            <div style="display: flex; flex-direction: row;"><h4>Capital:</h4><p>*****</p></div><br><br>
+        </div>
+        <div class="card egypt" data-country="Egypt">
+            <img src="./images/egypt.png" width="100px" height="180px" alt="">
+            <h2>Egypt</h2>
+            <div style="display: flex; flex-direction: row;"><h4>Population:</h4><p>8378787</p></div>
+            <div style="display: flex; flex-direction: row;"><h4>Religion:</h4><p>Africa</p></div>
+            <div style="display: flex; flex-direction: row;"><h4>Capital:</h4><p>*****</p></div><br><br>
+        </div>
+
+        <!-- Australia/Oceania -->
+        <div class="card australia" data-country="Australia">
+            <img src="./images/australia.png" width="100px" height="180px" alt="">
+            <h2>Australia</h2>
+            <div style="display: flex; flex-direction: row;"><h4>Population:</h4><p>8378787</p></div>
+            <div style="display: flex; flex-direction: row;"><h4>Religion:</h4><p>Australia/Oceania</p></div>
+            <div style="display: flex; flex-direction: row;"><h4>Capital:</h4><p>*****</p></div><br><br>
+        </div>
+        <div class="card newzealand" data-country="New Zealand">
+            <img src="./images/newzealand.png" width="100px" height="180px" alt="">
+            <h2>New Zealand</h2>
+            <div style="display: flex; flex-direction: row;"><h4>Population:</h4><p>8378787</p></div>
+            <div style="display: flex; flex-direction: row;"><h4>Religion:</h4><p>Australia/Oceania</p></div>
+            <div style="display: flex; flex-direction: row;"><h4>Capital:</h4><p>*****</p></div><br><br>
+        </div>
     </div>
 
     <div class="country-details" id="countryDetails">
         <!-- Country details will be displayed here -->
     </div>
-    
 
-    <div class="card">
-        <img src="./images/croatia.png" width="100px" height="180px" alt="">
-        <h2>Croatia</h2>
-        <div style="display: flex; flex-direction: row;"><h4>Population:</h4><p>8378787</p></div>
-        <div style="display: flex; flex-direction: row;"><h4>Religion:</h4><p>Sooth asia</p></div>
-        <div style="display: flex; flex-direction: row;"><h4>Capital:</h4><p>*****</p></div><br><br>
-    </div>
+    <script>
+        var icon = document.getElementById("icon");
+        icon.onclick = function () {
+            document.body.classList.toggle("dark-theme");
+        };
 
-    <div class="card">
-        <img src="./images/spain.png" width="100px" height="180px" alt="">
-        <h2>Spain</h2>
-        <div style="display: flex; flex-direction: row;"><h4>Population:</h4><p>8378787</p></div>
-        <div style="display: flex; flex-direction: row;"><h4>Religion:</h4><p>Sooth asia</p></div>
-        <div style="display: flex; flex-direction: row;"><h4>Capital:</h4><p>*****</p></div><br><br>
-    </div>
+        // Function to handle filtering based on the dropdown selection
+        document.getElementById("regionFilter").addEventListener("change", function () {
+            var selectedRegion = this.value;
+            var cards = document.querySelectorAll(".card");
+            cards.forEach(function (card) {
+                if (selectedRegion === "all" || card.classList.contains(selectedRegion.toLowerCase())) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
 
-    <div class="card">
-        <img src="./images/portigal.png" width="100px" height="180px" alt="">
-        <h2>Portgal</h2>
-        <div style="display: flex; flex-direction: row;"><h4>Population:</h4><p>8378787</p></div>
-        <div style="display: flex; flex-direction: row;"><h4>Religion:</h4><p>Sooth asia</p></div>
-        <div style="display: flex; flex-direction: row;"><h4>Capital:</h4><p>*****</p></div><br><br>
-    </div>
+        // Function to handle filtering based on the search input
+        document.getElementById("searchInput").addEventListener("input", function () {
+            var searchString = this.value.trim().toLowerCase();
+            var cards = document.querySelectorAll(".card");
+            cards.forEach(function (card) {
+                var countryName = card.querySelector("h2").textContent.toLowerCase();
+                if (countryName.includes(searchString)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
 
-    <div class="card">
-        <img src="./images/brazil.png" width="100px" height="180px" alt="">
-        <h2>Brazil</h2>
-        <div style="display: flex; flex-direction: row;"><h4>Population:</h4><p>8378787</p></div>
-        <div style="display: flex; flex-direction: row;"><h4>Religion:</h4><p>Sooth asia</p></div>
-        <div style="display: flex; flex-direction: row;"><h4>Capital:</h4><p>*****</p></div><br><br>
-    </div>
-</div>
+        // Function to display country details when a card is clicked
+        function displayCountryDetails(countryData) {
+            var detailsDiv = document.getElementById("countryDetails");
+            detailsDiv.innerHTML = `
+                <img src="${countryData.image}" width="100px" height="180px" alt="">
+                <h2>${countryData.name}</h2>
+                <p>Population: ${countryData.population}</p>
+                <p>Religion: ${countryData.religion}</p>
+                <p>Capital: ${countryData.capital}</p>
+            `;
 
+            // Hide the search and filter elements
+            var searchFilterDiv = document.getElementById("searchFilterDiv");
+            searchFilterDiv.style.display = "none";
 
-<script>
-    var icon = document.getElementById("icon");
-    icon.onclick = function() {
-        document.body.classList.toggle("dark-theme");
-    }
+            // Show the back button
+            var backButton = document.getElementById("backButton");
+            backButton.style.display = "block";
+        }
 
-    // Function to handle filtering based on the dropdown selection
-    document.getElementById("regionFilter").addEventListener("change", function () {
-        var selectedRegion = this.value;
+        // Add event listener to each card
         var cards = document.querySelectorAll(".card");
         cards.forEach(function (card) {
-            if (selectedRegion === "all" || card.classList.contains(selectedRegion.toLowerCase())) {
-                card.style.display = "block";
-            } else {
-                card.style.display = "none";
-            }
-        });
-    });
+            card.addEventListener("click", function () {
+                // Hide all country cards
+                var allCards = document.querySelectorAll(".card");
+                allCards.forEach(function (c) {
+                    c.style.display = "none";
+                });
 
-    // Function to handle filtering based on the search input
-    document.getElementById("searchInput").addEventListener("input", function () {
-        var searchString = this.value.trim().toLowerCase();
-        var cards = document.querySelectorAll(".card");
-        cards.forEach(function (card) {
-            var countryName = card.querySelector("h2").textContent.toLowerCase();
-            if (countryName.includes(searchString)) {
-                card.style.display = "block";
-            } else {
-                card.style.display = "none";
-            }
-        });
-    });
+                // Show the "country-details" div
+                var detailsDiv = document.getElementById("countryDetails");
+                detailsDiv.style.display = "block";
 
-    
-</script>
-  
+                // Extract country details from the card
+                var countryName = card.querySelector("h2").textContent;
+                var population = card.querySelector("div:nth-child(3) p").textContent;
+                var religion = card.querySelector("div:nth-child(4) p").textContent;
+                var capital = card.querySelector("div:nth-child(5) p").textContent;
+                var imageSrc = card.querySelector("img").getAttribute("src");
+
+                // Create an object with the country details
+                var countryData = {
+                    name: countryName,
+                    population: population,
+                    religion: religion,
+                    capital: capital,
+                    image: imageSrc,
+                };
+
+                // Display the country details
+                displayCountryDetails(countryData);
+            });
+        });
+
+        // Add event listener to the back button
+        var backButton = document.getElementById("backButton");
+        backButton.addEventListener("click", function () {
+            // Hide the country details
+            var detailsDiv = document.getElementById("countryDetails");
+            detailsDiv.style.display = "none";
+
+            // Show the search and filter elements
+            var searchFilterDiv = document.getElementById("searchFilterDiv");
+            searchFilterDiv.style.display = "flex";
+
+            // Show all country cards
+            var allCards = document.querySelectorAll(".card");
+            allCards.forEach(function (c) {
+                c.style.display = "block";
+            });
+
+            // Hide the back button
+            backButton.style.display = "none";
+        });
+    </script>
 </body>
 </html>
